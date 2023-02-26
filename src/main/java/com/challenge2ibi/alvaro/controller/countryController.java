@@ -72,20 +72,14 @@ public class countryController {
     @GetMapping
     @RequestMapping("/order")
     public List<country> order(@RequestParam String order) {
-        if (order.equals("name")) {
-            return countryRepository.findAll(Sort.by("name").ascending());
-        } else if (order.equals("region")) {
-            return countryRepository.findAll(Sort.by("region").ascending());
-        } else if (order.equals("subregion")) {
-            return countryRepository.findAll(Sort.by("subregion").ascending());
-        } else if (order.equals("capital")) {
-            return countryRepository.findAll(Sort.by("capital").ascending());
-        } else if (order.equals("area")) {
-            return countryRepository.findAll(Sort.by("area").ascending());
-        } else {
-            return countryRepository.findAll();
-        }
+        return switch (order) {
+            case "name" -> countryRepository.findAll(Sort.by("name").ascending());
+            case "region" -> countryRepository.findAll(Sort.by("region").ascending());
+            case "subregion" -> countryRepository.findAll(Sort.by("subregion").ascending());
+            case "capital" -> countryRepository.findAll(Sort.by("capital").ascending());
+            case "area" -> countryRepository.findAll(Sort.by("area").ascending());
+            default -> countryRepository.findAll();
+        };
     }
-
 
 }
