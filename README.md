@@ -20,6 +20,20 @@ A URL base da API é `2ibichallenge-production.up.railway.app`.
 
 `/country/{id}` - Retorna o país com o id informado.
 
+`/order?order={name}` - Retorna todos os países ordenados pelo nome.
+
+`/order?order={area}` - Retorna todos os países ordenados pela área.
+
+`/order?order={population}` - Retorna todos os países ordenados pela população.
+
+`/search?name={name}` - Retorna todos os países que possuem o nome informado.
+
+`/search?capital={capital}` - Retorna todos os países que possuem a capital informada.
+
+`/search?region={region}` - Retorna todos os países que possuem a região informada.
+
+`/search?subregion={subregion}` - Retorna todos os países que possuem a sub-região informada.
+
 ### POST
 
 `/country` - Cria um novo país.
