@@ -13,7 +13,5 @@ import java.util.Optional;
 public interface countryRepository extends JpaRepository<country, Long>, JpaSpecificationExecutor<country> {
     @Override
     Optional<country> findById(Long id);
-
-
-
+    
 }
