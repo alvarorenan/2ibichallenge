@@ -12,6 +12,8 @@ Neste projeto há um arquivo chamado `CHALLENGE-2IBI.postman_collection.json` qu
 
 ## ROTAS
 
+A URL base da API é `2ibichallenge-production.up.railway.app`.
+
 ### GET
 
 `/country` - Retorna todos os países cadastrados.
